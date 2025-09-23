@@ -1,6 +1,6 @@
 <?php
 
-class Filme extends Titulo
+class Filme extends Titulo implements Avaliavel
 {
     public function __construct(
         string $nome,
@@ -11,6 +11,7 @@ class Filme extends Titulo
         parent::__construct($nome, $anoLancamento, $genero);
     }
 
+    #[Override]
     public function duracaoEmMinutos(): int
     {
         return $this->duracaoEmMinutos;
